@@ -61,5 +61,8 @@ dependencies {
     //picasso
     implementation(libs.picasso)
 
+    //lottie
+    implementation (libs.lottie)
+
 
 }
