@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">French Pastry</string>
     <string name="txt_net_dialog">لطفا دسترسی به اینترنت را بررسی کنید</string>
+    <string name="splash_image">splash image</string>
 </resources>
