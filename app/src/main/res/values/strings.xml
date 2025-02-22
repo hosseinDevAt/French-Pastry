@@ -2,4 +2,17 @@
     <string name="app_name">French Pastry</string>
     <string name="txt_net_dialog">لطفا دسترسی به اینترنت را بررسی کنید</string>
     <string name="splash_image">splash image</string>
+    <string name="login_main_pic">login_main_pic</string>
+    <string name="logo">logo</string>
+    <string name="goToApp">ورود به برنامه</string>
+    <string name="frenchPastry">شیرینی فرانسوی</string>
+    <string name="dec_login">جهت ورود به برنامه شماره موبایل خود را در کادر زیر وارد کرده و کدارسالی به موبایل خود را در برنامه وارد کنید.</string>
+    <string name="code">کد تایید</string>
+    <string name="edit_number">ویرایش شماره</string>
+    <string name="resend_code">ارسال مجدد کد</string>
+    <string name="arrow_left">arrow_left</string>
+    <string name="enter_code">enter code</string>
+    <string name="enterCode">کد را وارد کنید</string>
+    <string name="user_data">اطلاعات کاربری</string>
+    <string name="enter_name">نام خود را وارد کنید</string>
 </resources>

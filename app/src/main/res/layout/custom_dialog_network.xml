@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/ic_danger" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -37,9 +37,9 @@
         android:layout_width="0dp"
         app:text="تلاش مجدد"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/txt_title"
+        app:layout_constraintStart_toStartOf="@+id/txt_title"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
 
 
     <com.example.frenchpastry.ui.customView.CustomButtonImportant

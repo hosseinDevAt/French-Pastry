@@ -5,6 +5,7 @@ import android.content.Context
 import android.provider.Settings
 import com.example.frenchpastry.data.local.pref.SecureSharedPref
 import com.example.frenchpastry.data.local.pref.SharedPrefKeys
+import java.math.BigInteger
 import java.security.MessageDigest
 
 class DeviceInfo {
@@ -39,9 +40,13 @@ class DeviceInfo {
         fun publicKey(context: Context): String {
 
             val input = PRIVATE_KEY + getDeviceID(context) + getApi(context)
+            val md = MessageDigest.getInstance("MD5")
 
             if (publicKey == null){
-                publicKey = hashSHA256(input)
+                publicKey = BigInteger(
+                    1,
+                    md.digest(input.toByteArray())
+                ).toString(16).padStart(32, '0')
             }
 
             return publicKey ?: ""
@@ -52,19 +57,20 @@ class DeviceInfo {
         fun publicKeyWithoutApi(context: Context) : String {
 
             val input = PRIVATE_KEY + getDeviceID(context)
+            val md = MessageDigest.getInstance("MD5")
 
+            if (publicKeyWithoutApiKey == null){
+                publicKeyWithoutApiKey = BigInteger(
+                    1,
+                    md.digest(input.toByteArray())
+                ).toString(16).padStart(32, '0')
+            }
 
-            if (publicKeyWithoutApiKey == null)
-                publicKeyWithoutApiKey = hashSHA256(input)
 
 
             return publicKeyWithoutApiKey ?: ""
         }
 
-        private fun hashSHA256(input: String) : String {
-            val bytes = MessageDigest.getInstance("SHA-256").digest(input.toByteArray())
-            return bytes.joinToString("") {"%02x".format(it)} // to hexadecimal
-        }
 
     }
 

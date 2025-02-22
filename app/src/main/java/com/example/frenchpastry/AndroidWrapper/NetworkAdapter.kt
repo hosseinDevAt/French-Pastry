@@ -13,24 +13,26 @@ import com.example.frenchpastry.databinding.CustomDialogNetworkBinding
 
 object NetworkAdapter {
 
-    fun isNetworkState(context: Context, activityUtils: ActivityUtils){
+    fun isNetworkState(context: Context, activityUtils: ActivityUtils): Boolean {
 
-         if (netInfo(context)){
-            activityUtils.activeNetwork(true)
-        }else{
+        return if (netInfo(context)) {
+            activityUtils.activeNetwork()
+            true
+        } else {
             showDialog(context, activityUtils)
-             activityUtils.activeNetwork(false)
+            false
         }
 
     }
 
-    private fun internetRefresh(context: Context, activityUtils: ActivityUtils) {
+    private fun internetRefresh(context: Context, activityUtils: ActivityUtils): Boolean {
 
-         if (netInfo(context)) {
-            activityUtils.activeNetwork(true)
+        return if (netInfo(context)) {
+            activityUtils.activeNetwork()
+            true
         } else {
             showDialog(context, activityUtils)
-            activityUtils.activeNetwork(false)
+            false
         }
     }
 
@@ -52,7 +54,7 @@ object NetworkAdapter {
     }
 
 
-    private fun showDialog(context: Context, activityUtils: ActivityUtils){
+    private fun showDialog(context: Context, activityUtils: ActivityUtils) {
 
         val view = CustomDialogNetworkBinding.inflate(LayoutInflater.from(context))
         val dialog = Dialog(context)
