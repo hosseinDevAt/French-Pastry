@@ -14,5 +14,8 @@
         <attr name="buttonWhite" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="CustomAppBar">
+        <attr name="isBack" format="boolean"/>
+    </declare-styleable>
     
 </resources>

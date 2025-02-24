@@ -15,4 +15,12 @@
     <string name="enterCode">کد را وارد کنید</string>
     <string name="user_data">اطلاعات کاربری</string>
     <string name="enter_name">نام خود را وارد کنید</string>
+    <string name="img_back">img_back</string>
+    <string name="bell">bell</string>
+    <string name="menu">menu</string>
+    <string name="ic_home">ic_home</string>
+    <string name="ic_cake">ic_cake</string>
+    <string name="ic_shopping_bag">ic_shopping_bag</string>
+    <string name="ic_pastry">ic_pastry</string>
+    <string name="ic_user">ic_user</string>
 </resources>
