@@ -23,4 +23,17 @@
     <string name="ic_shopping_bag">ic_shopping_bag</string>
     <string name="ic_pastry">ic_pastry</string>
     <string name="ic_user">ic_user</string>
+    <string name="ic_close">ic_close</string>
+    <string name="back_nav">back_nav</string>
+    <string name="user_profile">پروفایل کاربری</string>
+    <string name="my_orders">سفارش های من</string>
+    <string name="support">پشتیبانی</string>
+    <string name="about_us">درباره ما</string>
+    <string name="connect_us">connect_us</string>
+    <string name="connectUs">ارتباط با ما</string>
+    <string name="ic_update">ic_update</string>
+    <string name="update">بروزرسانی نرم افزار</string>
+    <string name="logout">خروج از حساب کاربری</string>
+    <string name="ic_bottom_nav">ic_bottom-nav</string>
+    <string name="version1">نسخه 1.1</string>
 </resources>

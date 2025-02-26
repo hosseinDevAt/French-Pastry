@@ -1,6 +1,7 @@
 package com.example.frenchpastry.data.remote.MainApi
 
 import com.example.frenchpastry.data.remote.ApiService.LoginApiService
+import com.example.frenchpastry.data.remote.ApiService.UserInfoApiService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -25,4 +26,5 @@ object RetrofitService {
 
 
     val loginApiService : LoginApiService = retrofit.create(LoginApiService::class.java)
+    val userInfoService : UserInfoApiService = retrofit.create(UserInfoApiService::class.java)
 }
