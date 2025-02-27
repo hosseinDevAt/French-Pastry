@@ -30,7 +30,7 @@ class ViewMainActivity : FrameLayout, ActiveFragment {
 
 
     fun initialize() {
-        activityUtils.setFragment(HomeFragment())
+        activityUtils.setFragment(HomeFragment(context, activityUtils))
     }
 
     fun showNavDrawer() {
@@ -47,7 +47,7 @@ class ViewMainActivity : FrameLayout, ActiveFragment {
     override fun setFragment(type: FragmentType) {
         val fragment = when (type) {
 
-            FragmentType.HOME -> HomeFragment()
+            FragmentType.HOME -> HomeFragment(context, activityUtils)
             FragmentType.CAKE -> CakeFragment()
             FragmentType.PASTRY -> PastryFragment()
             FragmentType.PROFILE -> ProfileFragment()

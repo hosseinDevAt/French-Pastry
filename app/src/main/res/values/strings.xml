@@ -36,4 +36,12 @@
     <string name="logout">خروج از حساب کاربری</string>
     <string name="ic_bottom_nav">ic_bottom-nav</string>
     <string name="version1">نسخه 1.1</string>
+    <string name="ic_recycler">ic_recycler</string>
+    <string name="ic_arrow_left">ic_arrow_left</string>
+    <string name="all">بیشتر</string>
+    <string name="sell">تومان</string>
+    <string name="img_off">img_off</string>
+    <string name="ic_back_white">ic back_white</string>
+    <string name="ic_btn_shopping">ic_btn_shopping</string>
+    <string name="banner">Banner</string>
 </resources>

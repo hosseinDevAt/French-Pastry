@@ -17,5 +17,9 @@
     <declare-styleable name="CustomAppBar">
         <attr name="isBack" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="CustomRecyclerHorizantal">
+        <attr name="title" format="string"/>
+    </declare-styleable>
     
 </resources>
