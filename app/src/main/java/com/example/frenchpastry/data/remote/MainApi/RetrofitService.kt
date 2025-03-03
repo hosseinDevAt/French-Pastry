@@ -2,6 +2,7 @@ package com.example.frenchpastry.data.remote.MainApi
 
 import com.example.frenchpastry.data.remote.ApiService.LoginApiService
 import com.example.frenchpastry.data.remote.ApiService.MainApiService
+import com.example.frenchpastry.data.remote.ApiService.PastryListApiService
 import com.example.frenchpastry.data.remote.ApiService.UserInfoApiService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -29,4 +30,5 @@ object RetrofitService {
     val loginApiService : LoginApiService = retrofit.create(LoginApiService::class.java)
     val userInfoService : UserInfoApiService = retrofit.create(UserInfoApiService::class.java)
     val mainApiService : MainApiService = retrofit.create(MainApiService::class.java)
+    val pastryListApiService : PastryListApiService = retrofit.create(PastryListApiService::class.java)
 }

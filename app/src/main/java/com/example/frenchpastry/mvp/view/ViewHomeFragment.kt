@@ -5,7 +5,6 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,7 +17,6 @@ import com.example.frenchpastry.data.remote.DataModel.PastriesModel
 import com.example.frenchpastry.data.remote.DataModel.RequestMain
 import com.example.frenchpastry.databinding.HomeFragmentBinding
 import com.example.frenchpastry.ui.activity.ListPastryActivity
-import com.example.frenchpastry.ui.fragment.HomeFragment
 
 class ViewHomeFragment : FrameLayout {
 
@@ -102,5 +100,7 @@ class ViewHomeFragment : FrameLayout {
         }
 
     }
+
+
 
 }

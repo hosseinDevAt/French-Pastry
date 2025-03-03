@@ -44,4 +44,6 @@
     <string name="ic_back_white">ic back_white</string>
     <string name="ic_btn_shopping">ic_btn_shopping</string>
     <string name="banner">Banner</string>
+    <string name="f_logo_decs">f_logo_decs</string>
+    <string name="img_search">img_search</string>
 </resources>

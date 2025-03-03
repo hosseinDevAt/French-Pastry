@@ -11,6 +11,8 @@ interface ActivityUtils {
 
     fun setViewPagerFragment(viewPager2: ViewPager2, data: ArrayList<String>) {}
 
+    fun finished() {}
+
 
 
 }

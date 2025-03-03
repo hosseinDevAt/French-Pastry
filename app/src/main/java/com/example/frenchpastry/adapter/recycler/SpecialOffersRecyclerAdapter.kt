@@ -18,25 +18,25 @@ import com.example.frenchpastry.ui.activity.DetailPastryActivity
 import com.example.frenchpastry.ui.activity.ListPastryActivity
 
 class SpecialOffersRecyclerAdapter(
-    private val pastries : ArrayList<PastriesModel>,
+    private val pastries: ArrayList<PastriesModel>,
     private val context: Context
-): RecyclerView.Adapter<SpecialOffersRecyclerAdapter.SpecialOffersViewHolder>() {
+) : RecyclerView.Adapter<SpecialOffersRecyclerAdapter.SpecialOffersViewHolder>() {
 
     inner class SpecialOffersViewHolder(
-        private val binding : RecyclerItemMainVerticalBinding
-    ): ViewHolder(binding.root){
+        private val binding: RecyclerItemMainVerticalBinding
+    ) : ViewHolder(binding.root) {
 
 
-        fun setData(data: PastriesModel, position: Int){
+        fun setData(data: PastriesModel, position: Int) {
 
-            if (position == 0){
+            if (position == 0) {
                 binding.root.visibility = View.INVISIBLE
-            }else {
+            } else {
                 binding.root.visibility = View.VISIBLE
                 binding.txtPastryName.text = data.title
                 binding.txtMainPrice.text = OtherUtills().changePrice(data.price)
 
-                if (data.has_discount){
+                if (data.has_discount) {
                     binding.txtMainPrice.paintFlags =
                         binding.txtMainPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
                     binding.txtMainPrice.setTextColor(Color.GRAY)
@@ -44,14 +44,14 @@ class SpecialOffersRecyclerAdapter(
 
                     binding.txtOffPrice.text = OtherUtills().changePrice(data.sale_price)
                     binding.txtOff.text = data.discount
-                }else{
+                } else {
                     binding.offGroup.visibility = View.GONE
                 }
 
                 if (data.thumbnail.isNotEmpty())
                     PicassoHandler.setImage(binding.imgPastry, data.thumbnail)
 
-                if (position == pastries.lastIndex){
+                if (position == pastries.lastIndex) {
                     binding.allViews.visibility = View.INVISIBLE
                     binding.others.visibility = View.VISIBLE
 
@@ -60,12 +60,13 @@ class SpecialOffersRecyclerAdapter(
                         intent.putExtra(ListPastryActivity.TYPE, ListPastryActivity.SPECIAL_OFFER)
                         context.startActivity(intent)
                     }
-                }
+                } else {
 
-                binding.root.setOnClickListener {
-                    val intent = Intent(context, DetailPastryActivity::class.java)
-                    intent.putExtra(DetailPastryActivity.ID, data.ID)
-                    context.startActivity(intent)
+                    binding.root.setOnClickListener {
+                        val intent = Intent(context, DetailPastryActivity::class.java)
+                        intent.putExtra(DetailPastryActivity.ID, data.ID)
+                        context.startActivity(intent)
+                    }
                 }
 
             }
@@ -77,7 +78,8 @@ class SpecialOffersRecyclerAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         SpecialOffersViewHolder(
-            RecyclerItemMainVerticalBinding.inflate(LayoutInflater.from(parent.context),
+            RecyclerItemMainVerticalBinding.inflate(
+                LayoutInflater.from(parent.context),
                 parent,
                 false
             )

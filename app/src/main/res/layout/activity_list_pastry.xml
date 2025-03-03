@@ -7,4 +7,94 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.ListPastryActivity">
 
+    <com.example.frenchpastry.ui.customView.CustomAppBar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isBack="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_f"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/f_logo_decs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:srcCompat="@drawable/ic_f" />
+
+    <TextView
+        android:id="@+id/txt_title_list_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textSize="@dimen/heading_large_size"
+        android:textColor="@color/color_text_black"
+        android:textStyle="bold"
+        tools:text="شیرینی خامه ای"
+        app:layout_constraintBottom_toBottomOf="@+id/img_f"
+        app:layout_constraintEnd_toStartOf="@+id/img_f"
+        app:layout_constraintTop_toTopOf="@+id/img_f" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPastry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/recycler_list_item_product"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/allView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progressBar"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+
+
+    <com.example.frenchpastry.ui.customView.CustomEditText
+        android:id="@+id/edtSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:rtlSupport="true"
+        android:layout_marginEnd="4dp"
+        app:hint="محصول دلخواه را جستجو نمایید"
+        app:layout_constraintEnd_toEndOf="@+id/img_f"
+        app:layout_constraintStart_toEndOf="@+id/img_search"
+        app:layout_constraintTop_toBottomOf="@+id/img_f" />
+
+    <ImageView
+        android:id="@+id/img_search"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/img_search"
+        app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtSearch"
+        app:srcCompat="@drawable/ic_search" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

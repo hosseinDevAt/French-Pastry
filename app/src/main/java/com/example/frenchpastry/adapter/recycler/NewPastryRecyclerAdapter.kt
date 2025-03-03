@@ -44,6 +44,7 @@ class NewPastryRecyclerAdapter(
                 PicassoHandler.setImage(binding.imgPastry, data.thumbnail)
             }
 
+
             binding.root.setOnClickListener{
                 val intent = Intent(context, DetailPastryActivity::class.java)
                 intent.putExtra(DetailPastryActivity.ID, data.ID)
